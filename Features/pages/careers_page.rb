@@ -10,7 +10,12 @@ class ThoughtWorksCareersPage
   def initialize(browser)
     @browser = browser
     @view_jobs_link         = @browser.link(:text => "Jobs")
-    @graduates_link = @browser.link(:link => "Graduates")
+    @graduates_link = @browser.link(:link => "Graduates")   #not sure what the method @browser.link does, nor am I sure how to google the answer
+  end
+
+  #I added this, kind of experimenting with the .link method.
+  def click_link (link_text)
+    self.link(:text => link_text)
   end
 
   def method_missing(sym, *args, &block)
